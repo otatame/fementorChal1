@@ -1,0 +1,419 @@
+//Variables
+$font: 'Public Sans', sans-serif;
+$margC: 0 auto;
+$testing: rgb(109, 109, 109);
+$bc: hsl(192, 70%, 51%);
+$db: hsl(233, 26%, 24%);
+$lg: hsl(136, 65%, 51%);
+$vlg: hsl(0, 0%, 95%);
+$lgb: hsl(0, 0%, 58%);
+$lgb2: hsl(0, 0%, 47%);
+$fw3: 300;
+$fw4: 400;
+$fw7: 700;
+$grad: linear-gradient(150deg, rgba(29,213,78,1) 0%, rgba(123,209,231,1) 100%);
+
+body{
+    font-family: $font;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+//Navbar
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    padding: 1.5em 6.5em;
+    position: relative;
+    z-index: 1;
+    .menu1{
+        display: flex;
+        li{
+            padding: 0 1.3em;
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: $db;
+                position: relative;
+            }
+            a::after{
+                content: '';
+                align-items: center;
+                background: $grad;
+                width: 0;
+                height: 0.3em;
+                display: flex;
+                position: absolute;
+                transition: all ease 0.4s;
+                left: 50%;
+                top: 2.8em;
+            }
+            a:hover:after{
+                width: 100%;
+                left: 0;
+            }
+        }
+  
+    }
+    .menu2{
+        li{
+            list-style: none;
+            a{
+                text-decoration: none;
+                background: $grad;
+                padding: 0.8em 2em;
+                border-radius: 6em;
+                color: white;
+                font-weight: $fw7;
+                transition: all ease 0.3s;
+            }
+            a:hover{
+                box-shadow: 0 0.1em 0.6em 0.2em rgba(150, 240, 133, 0.63);
+                transition: all ease 0.3s;
+            }
+        }
+    }
+}
+
+#heading{
+    display: flex;
+    height: 83vh;
+    background-color: #fafafa;
+    .head{
+        width: 40%;
+        margin: 6.5em 0 0 6.3em;
+        h1{
+            font-weight: $fw4;
+            font-size: 3em;
+            color: $db;
+            line-height: 1.3em;
+        }
+        p{
+            margin: 1.5em 0 2.5em 0;
+            font-size: 1.1em;
+            line-height: 1.6em;
+            color: $lgb;
+        }
+        a{
+            text-decoration: none;
+            background: $grad;
+            padding: 0.8em 2em;
+            border-radius: 6em;
+            color: white;
+            font-weight: $fw7;
+            transition: all ease 0.3s;
+            
+        }
+        a:hover{
+            box-shadow: 0 0.1em 0.6em 0.2em rgba(150, 240, 133, 0.63);
+            transition: all ease 0.3s;
+        }
+    }
+    .images{
+        position: relative;
+        img{
+            position: absolute;
+            width: 60em;
+            
+        }
+        .intro{
+            left: -5em;
+            top: -12em;
+        }
+        .mock{
+            width: 40em;
+            left: 7em;
+            top: -8em;
+        }
+    }
+}
+
+main{
+    background: #f4f5f7;
+    .arc1{
+        margin-left: 6em;
+        padding: 5em 0;
+        h2{
+            font-weight: $fw3;
+            font-size: 2em;
+            margin-bottom: 0.7em;
+            color: $db;
+        }
+        p{
+            line-height: 1.5em;
+            color: $lgb2;
+        }
+    }
+    .arc2{
+        display: flex;
+        margin: 0 6em;
+        margin-bottom: 5em;
+        font-weight: $fw3;
+        color: $lgb2;
+        .cont1{
+            padding-right: 3.5em;
+            h3{
+                color: $db;
+                font-size: 1.4em;
+                font-weight: $fw4;
+                margin: 1.5em 0;
+            }
+        }
+        .cont2{
+            padding-right: 3.5em;
+            h3{
+                color: $db;
+                font-size: 1.4em;
+                font-weight: $fw4;
+                margin: 1.5em 0;
+            }
+        }
+        .cont3{
+            padding-right: 3.5em;
+            h3{
+                color: $db;
+                font-size: 1.4em;
+                font-weight: $fw4;
+                margin: 1.5em 0;
+            }
+        }
+        .cont4{
+            h3{
+                color: $db;
+                font-size: 1.4em;
+                font-weight: $fw4;
+                margin: 1.5em 0;
+            }
+        }
+    }
+    .arc3{
+        background-color: #fafafa;
+        margin-bottom: 5em;
+        h3{
+            font-weight: $fw4;
+            font-size: 2em;
+            margin: 0 3em;
+            padding: 2em 0 1.5em 0;
+            color: $db;
+        }
+        .articles{
+            display: flex;
+            margin: 0 6em;
+            .part1{
+                background: rgb(255, 255, 255);
+                width: fit-content;
+                border-radius: 8px;
+                padding-bottom: 2em;
+                margin-right: 1.5em;
+                box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.1);
+                img{
+                    width: 16em;
+                    max-width: inherit;
+                    border-radius: 5px;
+                }
+                .inside{
+                    width: 100%;
+                    padding: 0 2em;
+                    .credit{
+                        font-size: 0.8em;
+                        color: $lgb;
+                        margin: 1em 0;
+                    }
+                    h4{
+                        font-size: 1.2em;
+                        width: 85%;
+                        margin: 0.6em 0;
+                        font-weight: $fw4;
+                        color: $db;
+                    }
+                    p{
+                        font-size: 0.8em;
+                        color: $lgb2;
+                        line-height: 1.5em;
+                    }
+                }
+            }
+
+            .part2{
+                background: rgb(255, 255, 255);
+                width: 100%;
+                border-radius: 8px;
+                padding-bottom: 2em;
+                margin-right: 1.5em;
+                box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+                img{
+                    max-width: inherit;
+                    width: 18em;
+                    border-radius: 5px;
+                }
+                .inside{
+                    width: 100%;
+                    padding: 0 2em;
+                    .credit{
+                        font-size: 0.8em;
+                        color: $lgb;
+                        margin: 1em 0;
+                    }
+                    h4{
+                        font-size: 1.2em;
+                        width: 85%;
+                        margin: 0.6em 0;
+                        font-weight: $fw4;
+                        color: $db;
+                    }
+                    p{
+                        font-size: 0.8em;
+                        color: $lgb2;
+                        line-height: 1.5em;
+                    }
+                }
+            }
+
+            .part3{
+                background: rgb(255, 255, 255);
+                width: 100%;
+                border-radius: 8px;
+                padding-bottom: 2em;
+                margin-right: 1.5em;
+                box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+                img{
+                    max-width: inherit;
+                    width: 18em;
+                    border-radius: 5px;
+                }
+                .inside{
+                    width: 100%;
+                    padding: 0 2em;
+                    .credit{
+                        font-size: 0.8em;
+                        color: $lgb;
+                        margin: 1em 0;
+                    }
+                    h4{
+                        font-size: 1.2em;
+                        width: 85%;
+                        margin: 0.6em 0;
+                        font-weight: $fw4;
+                        color: $db;
+                    }
+                    p{
+                        font-size: 0.8em;
+                        color: $lgb2;
+                        line-height: 1.5em;
+                    }
+                }
+            }
+
+            .part4{
+                background: rgb(255, 255, 255);
+                width: 100%;
+                border-radius: 8px;
+                padding-bottom: 2em;
+                box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+                img{
+                    max-width: inherit;
+                    width: 18em;
+                    border-radius: 5px;
+                }
+                .inside{
+                    width: 100%;
+                    padding: 0 2em;
+                    .credit{
+                        font-size: 0.8em;
+                        color: $lgb;
+                        margin: 1em 0;
+                    }
+                    h4{
+                        font-size: 1.2em;
+                        width: 85%;
+                        margin: 0.6em 0;
+                        font-weight: $fw4;
+                        color: $db;
+                    }
+                    p{
+                        font-size: 0.8em;
+                        color: $lgb2;
+                        line-height: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background: $db;
+    color: white;
+    padding: 4em 0;
+    .foot{
+        display: flex;
+        justify-content: space-around;
+        .media{
+            img{
+                width: 11em;
+            }
+            .media2{
+                padding: 4em 0 0 0;
+                display: flex;
+                gap: 0.8em;
+                img{
+                    width: 1.5em;
+                }
+            }
+        }
+        .link1{
+            li{
+                list-style: none;
+                padding: 0.6em 0;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    font-weight: $fw3;
+                    font-size: 1.1em;
+                }
+            }
+        }
+        
+        .link2{
+            li{
+                list-style: none;
+                padding: 0.6em 0;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    font-weight: $fw3;
+                    font-size: 1.1em;
+                }
+            }
+        }
+        
+        .link3{
+            padding-top: 2em;
+            a{
+                text-decoration: none;
+                background: $grad;
+                padding: 0.8em 2em;
+                border-radius: 6em;
+                color: white;
+                font-weight: $fw7;
+                transition: all ease 0.3s;
+            }
+            a:hover{
+                box-shadow: 0 0.1em 0.4em 0.2em rgba(151, 240, 133, 0.322);
+                transition: all ease 0.3s;
+            }
+            h5{
+                color: $lgb2;
+                margin-top: 3em;
+            }
+        }
+    }
+}
