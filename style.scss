@@ -4,6 +4,7 @@ $margC: 0 auto;
 $testing: rgb(109, 109, 109);
 $bc: hsl(192, 70%, 51%);
 $db: hsl(233, 26%, 24%);
+$dba: rgba(45, 49, 77, 0.815);
 $lg: hsl(136, 65%, 51%);
 $vlg: hsl(0, 0%, 95%);
 $lgb: hsl(0, 0%, 58%);
@@ -18,6 +19,7 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    transition: all .3s;
 }
 
 *{
@@ -34,8 +36,10 @@ nav{
     padding: 1.5em 6.5em;
     position: relative;
     z-index: 1;
+    transition: all ease 350ms;
     .menu1{
         display: flex;
+        margin: 0 auto;
         li{
             padding: 0 1.3em;
             list-style: none;
@@ -64,6 +68,7 @@ nav{
   
     }
     .menu2{
+        
         li{
             list-style: none;
             a{
@@ -81,6 +86,17 @@ nav{
             }
         }
     }
+}
+
+.navs.black{
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    height: 9.5vh;
+    padding-left: 6em;
+    padding-right: 6em;
+    transition: all ease 350ms;
+    width: 100%;
+    box-shadow: 0 0 .6em .3em rgba(0, 0, 0, 0.2);
 }
 
 #heading{
@@ -415,5 +431,99 @@ footer{
                 margin-top: 3em;
             }
         }
+    }
+}
+
+/* Media Query */
+@media screen and(max-width:1045px){
+    nav{
+        .menu1{
+            display: flex;
+            transform: translateX(100%);
+            flex-direction: column;
+            position: absolute;
+            align-items: center;
+            background: $dba;
+            top: 0;
+            right: 0%;
+            width: 50%;
+            padding-top: 5em;
+            height: 100vh;
+            transition: all .5s ease;
+            li{
+                margin-top: 5vh;
+                a{
+                    color: white;
+                }
+            }
+        }
+        .menu2{
+            position: absolute;
+            top: 30em;
+            left: 66%;
+            transform: translateX(200%);
+            transition: all .55s ease;
+        }
+        #hamburger{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            position: relative;
+            cursor: pointer;
+            transition: all .55s ease;
+            .ham1, .ham2, .ham3{
+                height: 0.18em;
+                background: $grad;
+                width: 2em;
+            }
+        }
+
+        .hamburger2{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            position: absolute;
+            cursor: pointer;
+            top: 45%;
+            left: 100%;
+            transition: all .55s ease;
+            .ham4{
+                height: 0.18em;
+                background: $grad;
+                width: 2em;
+                transform: rotate(45deg) translate(-1px, 1px) ;
+            }
+
+            .ham5{
+                height: 0.18em;
+                transform: rotate(-45deg) translate(1px, -4px) ;
+                background: $grad;
+                width: 2em;
+            }
+        }
+    }
+
+    
+
+    /* Toggle Class */
+    .menu1.slide{
+        transform: translateX(0);
+        transition: all .5s ease;
+        box-shadow: 0 0.5em 3em 2em rgba(0, 0, 0, 0.4);
+    }
+
+    .menu2.slide{
+        transform: translateX(0);
+        transition: all .55s ease;
+    }
+
+    .hamburger2.appear{
+        left: 86%;
+        transition: all .55s ease;
+    }
+
+    #hamburger.gone{
+        opacity: 0;
+        transition: all .55s ease;
     }
 }

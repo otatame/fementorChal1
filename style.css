@@ -3,6 +3,8 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 * {
@@ -23,12 +25,15 @@ nav {
   padding: 1.5em 6.5em;
   position: relative;
   z-index: 1;
+  -webkit-transition: all ease 350ms;
+  transition: all ease 350ms;
 }
 
 nav .menu1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 auto;
 }
 
 nav .menu1 li {
@@ -85,6 +90,19 @@ nav .menu2 li a:hover {
           box-shadow: 0 0.1em 0.6em 0.2em rgba(150, 240, 133, 0.63);
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
+}
+
+.navs.black {
+  background-color: white;
+  position: fixed;
+  height: 9.5vh;
+  padding-left: 6em;
+  padding-right: 6em;
+  -webkit-transition: all ease 350ms;
+  transition: all ease 350ms;
+  width: 100%;
+  -webkit-box-shadow: 0 0 0.6em 0.3em rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0.6em 0.3em rgba(0, 0, 0, 0.2);
 }
 
 #heading {
@@ -487,5 +505,123 @@ footer .foot .link3 a:hover {
 footer .foot .link3 h5 {
   color: #787878;
   margin-top: 3em;
+}
+
+/* Media Query */
+@media screen and (max-width: 1045px) {
+  nav .menu1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: rgba(45, 49, 77, 0.815);
+    top: 0;
+    right: 0%;
+    width: 50%;
+    padding-top: 5em;
+    height: 100vh;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  nav .menu1 li {
+    margin-top: 5vh;
+  }
+  nav .menu1 li a {
+    color: white;
+  }
+  nav .menu2 {
+    position: absolute;
+    top: 30em;
+    left: 66%;
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+    -webkit-transition: all .55s ease;
+    transition: all .55s ease;
+  }
+  nav #hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: all .55s ease;
+    transition: all .55s ease;
+  }
+  nav #hamburger .ham1, nav #hamburger .ham2, nav #hamburger .ham3 {
+    height: 0.18em;
+    background: linear-gradient(150deg, #1dd54e 0%, #7bd1e7 100%);
+    width: 2em;
+  }
+  nav .hamburger2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    position: absolute;
+    cursor: pointer;
+    top: 45%;
+    left: 100%;
+    -webkit-transition: all .55s ease;
+    transition: all .55s ease;
+  }
+  nav .hamburger2 .ham4 {
+    height: 0.18em;
+    background: linear-gradient(150deg, #1dd54e 0%, #7bd1e7 100%);
+    width: 2em;
+    -webkit-transform: rotate(45deg) translate(-1px, 1px);
+            transform: rotate(45deg) translate(-1px, 1px);
+  }
+  nav .hamburger2 .ham5 {
+    height: 0.18em;
+    -webkit-transform: rotate(-45deg) translate(1px, -4px);
+            transform: rotate(-45deg) translate(1px, -4px);
+    background: linear-gradient(150deg, #1dd54e 0%, #7bd1e7 100%);
+    width: 2em;
+  }
+  /* Toggle Class */
+  .menu1.slide {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    -webkit-box-shadow: 0 0.5em 3em 2em rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0.5em 3em 2em rgba(0, 0, 0, 0.4);
+  }
+  .menu2.slide {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: all .55s ease;
+    transition: all .55s ease;
+  }
+  .hamburger2.appear {
+    left: 86%;
+    -webkit-transition: all .55s ease;
+    transition: all .55s ease;
+  }
+  #hamburger.gone {
+    opacity: 0;
+    -webkit-transition: all .55s ease;
+    transition: all .55s ease;
+  }
 }
 /*# sourceMappingURL=style.css.map */
